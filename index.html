@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boilterplate</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Flip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Observer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/EaselPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/PixiPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <main class="container">
+    <p>explore</p>
+    <svg viewBox="0 0 500 250">
+      <!-- <circle class="mover-bg" fill="none" cx="250" cy="125" r="120" /> -->
+      <path class="mover-bg" fill="none"d="M370 125c0 66.3-53.7 120-120 120s-120-53.7-120-120S183.7 5 250 5s120 53.7 120 120Z" />
+      <circle class="mover" fill="none" stroke="red" cx="250" cy="125" r="120" stroke-dasharray="188 188" />
+      <circle class="orbiter" fill="none" cx="250" cy="125" r="8" />
+      <circle class="orbiter orbiter-center" cx="250" cy="125" r="2" />
+      <circle class="dashed" fill="none" cx="250" cy="125" r="95" stroke-dasharray="1 5" />
+      <!-- <ellipse fill="none" cx="250" cy="125" rx="120" ry="120" /> -->
+    </svg>
+  </main>
+</body>
+
+</html>
