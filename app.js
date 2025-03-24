@@ -15,6 +15,7 @@ const setGsap = () => {
 };
 document.addEventListener("DOMContentLoaded", () => {
   setGsap();
+  const yoyo = true;
   const duration = 10;
   const ease = "power1.inOut";
 
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     strokeDashoffset: "750",
     ease,
     duration,
+    yoyo,
     repeat: -1,
   });
   gsap.to(".dashed", {
@@ -30,12 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
     transformOrigin: "center center",
     ease,
     duration,
+    yoyo,
     repeat: -1,
   });
   gsap.to(".orbiter", {
     ease,
     repeat: -1,
     duration,
+    yoyo,
     motionPath: {
       path: ".mover-bg",
       align: ".mover-bg",
