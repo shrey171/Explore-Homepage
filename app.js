@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const duration = 10;
   const ease = "power1.inOut";
 
-  gsap.set("svg .mover", { strokeDashoffset: "0" });
-  gsap.to("svg .mover", {
+  gsap.set("svg .rotor", { strokeDashoffset: "0" });
+  gsap.to("svg .rotor", {
     strokeDashoffset: "750",
     ease,
     duration,
@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
     duration,
     yoyo,
     motionPath: {
-      path: ".mover-bg",
-      align: ".mover-bg",
+      path: ".orbit",
+      align: ".orbit",
       alignOrigin: [0.5, 0.5],
       autoRotate: true,
       start: -0.125,

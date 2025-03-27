@@ -13,52 +13,92 @@ body {
 }
 
 .container {
-  background: #e6e6e6;
-  color: #1f3643;
+  background: hsl(202, 18%, 85%);
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding-top: 37vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  --size: 40rem;
+  aspect-ratio: 1/1;
+  width: var(--size);
+  position: relative;
+  z-index: 1;
 }
 
 p {
-  opacity: 0.6;
+  --offsetX: 2rem;
+  color: hsl(202, 37%, 19%, 0.6);
   font-size: 6rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3.5rem;
+  position: absolute;
+  left: 50%;
+  top: 27%;
+  translate: calc(-50% + var(--offsetX)) 0;
   z-index: 1;
-  translate: 2rem 0;
 }
 
 svg {
+  --theme: #61717b;
+  --theme-secondary: hsla(203, 12%, 3%, 0.1);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   stroke: white;
-  width: 78rem;
-  z-index: 0;
+  width: 100%;
+  max-width: min(90vh, 90vw);
   overflow: visible;
+  z-index: -1;
 }
 
-.mover-bg {
-  stroke: hsl(0, 0%, 85%);
-}
-
-.mover {
-  stroke: #1f3643;
+.rotor {
+  stroke: var(--theme);
   stroke-width: 2px;
   stroke-linecap: round;
 }
 
 .orbiter {
-  stroke: #1f3643;
+  stroke: var(--theme);
+}
+
+.orbiter-center {
+  fill: var(--theme);
 }
 
 .dashed {
-  stroke: hsl(0, 0%, 75%);
+  stroke: var(--theme-secondary);
   stroke-width: 5px;
+}
+
+@media (width< 900px) {
+  .wrapper {
+    --size: 30rem;
+  }
+
+  p {
+    --offsetX: 1rem;
+    top: 25%;
+    font-size: 4rem;
+    letter-spacing: 2.75rem;
+  }
+}
+
+@media (width< 650px) {
+  .wrapper {
+    --size: 20rem;
+  }
+
+  p {
+    --offsetX: 1rem;
+    top: 22%;
+    font-size: 2rem;
+    letter-spacing: 2rem;
+  }
 }
